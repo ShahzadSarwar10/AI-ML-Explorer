@@ -20,7 +20,18 @@ print(type(intVar2))
 floatVar = float(50.3)
 print(type(floatVar))
 
-floatVar2=50
+floatVar2=50.3
 print(type(floatVar2))
+
+#---------------------
+
+
+#---------------------- float = with an "e" to indicate the power of 10
+
+floatEVar = float(35e3)
+print(type(floatEVar))
+
+floatEVar2=35e3
+print(type(floatEVar2))
 
 #---------------------
