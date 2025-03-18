@@ -35,3 +35,11 @@ floatEVar2=35e3
 print(type(floatEVar2))
 
 #---------------------
+
+#---------------------- Complex = numbers are written with a "j" as the imaginary part
+ComplexVar = complex(27Y)
+print(type(ComplexVar))
+
+ComplexVar2=237Y
+print(type(ComplexVar2))
+
