@@ -8,6 +8,8 @@ new_number = integer_number + float_number
 print("Value:",new_number)
 print("Data Type:",type(new_number))
 
+
+
 # Example 2: Addition of string and integer Using Explicit Conversion
 
 num_string = '12'
