@@ -1,3 +1,4 @@
+# get version
 import sys
 
-print(sys.version)
+print("Pyhton version" - sys.version)
