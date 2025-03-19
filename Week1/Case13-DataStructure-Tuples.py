@@ -10,19 +10,15 @@ print (" Next  run")
 # Next  run
 
 
-t = (1, 2, 3, 4, 5)
+tt = (1, 2, 3, 4, 5)
 
 # tuples are indexed
-print(t[1])
-print(t[4])
+print(tt[1])
+print(tt[4])
 
 # tuples contain duplicate elements
-t = (1, 2, 3, 4, 2, 3)
-print(t)
-
-# updating an element
-t[1] = 100
-print(t)
+tt = (1, 2, 3, 4, 2, 3)
+print(tt)
 
 
 print (" Next  run")
@@ -85,8 +81,8 @@ print (" Next  run")
 
 
 # Code to create a tuple with repetition
-t = ('python',)*3
-print(t)
+tx = ('python',)*3
+print(tx)
 
 
 print (" Next  run")
