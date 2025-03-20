@@ -1,4 +1,4 @@
-# First programRIchardRichard
+# First program
 print ("Starts here")
 
 name = input("Please enter your name: ")
