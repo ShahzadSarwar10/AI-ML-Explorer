@@ -110,5 +110,4 @@ for attribute in attributes:
     
     # this statement is outside the inner loop
     print("-----")
-
     
