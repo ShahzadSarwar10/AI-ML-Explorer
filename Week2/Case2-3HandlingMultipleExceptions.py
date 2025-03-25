@@ -104,7 +104,7 @@ try:
     result = 10 / 0
 except ZeroDivisionError:
     print("Caught an exception")
-    raise
+#    raise
 
 # Next  run
 print (" Next  run")

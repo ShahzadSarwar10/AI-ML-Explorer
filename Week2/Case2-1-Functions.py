@@ -318,6 +318,90 @@ def factorial(n):
 inputNumber = int(input("Enter the number: "))
 factorial(inputNumber)
 
+
+#Inner function
+# Next  run
+print (" Next  run")
+def greeting(first, last):
+  # nested helper function
+  def getFullName():
+    return first + " " + last
+
+  print("Hi, " + getFullName() + "!")
+
+greeting('Quincy', 'Larson')
+
+#Hi, Quincy Larson!
+
+
+# Next  run
+print (" Next  run")
+#
+# 
+
+#Pass by Value and Pass by Reference in Python
+#Python’s argument-passing model is neither “Pass by Value” nor “Pass by Reference” but it is “Pass by Object Reference”. 
+#Depending on the type of object you pass in the function, the function behaves differently. Immutable objects show “pass by value” whereas mutable objects show “pass by reference”.
+
+def call_by_value(x):
+    x = x * 2
+    print("in function value updated to", x)
+    return
+
+def call_by_reference(list):
+    list.append("D")
+    print("in function list updated to", list)
+    return
+
+my_list = ["E"]
+num = 6
+print("number before=", num)
+call_by_value(num)
+print("after function num value=", num)
+print("list before",my_list)
+call_by_reference(my_list)
+print("after function list is ",my_list)
+
+
+#number before= 6
+#in function value updated to 12
+#after function num value= 6
+#list before ['E']
+#in function list updated to ['E', 'D']
+#after function list is  ['E', 'D']
+
+
+# Next  run
+print (" Next  run")
+#Local variables exist inside a function and cannot be accessed outside it.
+#Global variables exist throughout the script, but modifying them inside a function requires the global keyword.
+#Nonlocal variables allow modifying a variable from an enclosing function using the nonlocal keyword.
+
+
+x = 10  # Global variable
+
+def modify_global():
+    global x
+    x = 20  # Modifies the global variable
+
+modify_global()
+print(x)  # Output: 20
+
+
+
+def outer_function():
+    y = 10  # Enclosing scope variable
+
+    def inner_function():
+        nonlocal y
+        y = 20  # Modifies the enclosing scope variable
+
+    inner_function()
+    print(y)  # Output: 20
+
+outer_function()
+
+
 # Next  run
 print (" Next  run")
 def fun1(): # outer function
@@ -336,21 +420,3 @@ fun1()
 #Output
 #54
 #54
-
-#Inner function
-# Next  run
-print (" Next  run")
-def greeting(first, last):
-  # nested helper function
-  def getFullName():
-    return first + " " + last
-
-  print("Hi, " + getFullName() + "!")
-
-greeting('Quincy', 'Larson')
-
-#Hi, Quincy Larson!
-
-
-#
-# 
