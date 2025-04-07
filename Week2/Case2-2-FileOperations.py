@@ -108,14 +108,13 @@ print(os.getcwd())
 
 # Next  run
 print (" Next  run")
-#Removing a directory
-import os
-os.rmdir(FullURL+'newDirectory')
-
-
-# Next  run
-print (" Next  run")
 #Listing all files and directories
 import os
 print(os.listdir())
+
+# Next  run
+print (" Next  run")
+#Removing a directory
+import os
+os.rmdir(FullURL+'newDirectory')
 

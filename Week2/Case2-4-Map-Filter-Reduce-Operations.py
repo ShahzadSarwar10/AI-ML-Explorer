@@ -31,20 +31,6 @@ result = list(map(round, circle_areas, range(1,7)))
 print(result)
 
 
-
-# Next  run
-print (" Next  run")
-#An Example utilizing the zip() function
-
-
-my_chars = ['a', 'b', 'c', 'd', 'e']
-my_nums = [1,2,3,4,5]
-
-result = list(zip(my_chars, my_nums))
-
-print(result)
-
-
 # Next  run
 print (" Next  run")
 
@@ -116,8 +102,8 @@ my_names = ["olumide", "akinremi", "josiah", "temidayo", "omoseun"]
 my_numbers = [4, 6, 9, 23, 5]
 
 # Fix all three respectively.
-map_result = list(map(lambda x: x, my_floats))
-filter_result = list(filter(lambda name: name, my_names, my_names))
+map_result = list(map(lambda x: x*x , my_floats))
+filter_result = list(filter(lambda name: len(name) < 8, my_names))
 reduce_result = reduce(lambda num1, num2: num1 * num2, my_numbers, 0)
 
 print(map_result)
@@ -221,15 +207,6 @@ print(max_number)
 #9
 
 
-# Next  run
-print (" Next  run")
-#Suppose you have a CSV file containing data about customers, and you want to extract their email addresses and remove any duplicates. Here’s how you could do it using map(), filter(), and set():
-import csv
-with open('customers.csv', 'r') as file:
-    reader = csv.DictReader(file)
-    emails = set(filter(lambda x: len(x) > 0, map(lambda row: row['email'], reader)))
-print(emails)
-
 
 # Next  run
 print (" Next  run")
@@ -249,17 +226,6 @@ std_dev = stdev(grades)
 print('Standard deviation:', std_dev)
 #In this example, we use reduce() to compute the sum of the grades, and then divide by the number of grades to compute the mean. We use median() to compute the median, and `stdev()from thestatistics` module to compute the standard deviation.
 
-
-# Next  run
-print (" Next  run")
-#Example 3: Parsing text
-#Suppose you have a text file containing a list of words, and you want to count the number of occurrences of each word. Here’s how you could do it using map(), reduce(), and a dictionary:
-with open('words.txt', 'r') as file:
-    words = file.read().split()
-# count the occurrences of each word using map() and reduce()
-word_counts = reduce(lambda d, word: {**d, word: d.get(word, 0) + 1}, words, {})
-print(word_counts)
-#In this example, we use file.read() to read the entire file as a string, and split() to create a list of words. We then use reduce() to iterate over the list of words and accumulate a dictionary of word counts. The lambda function takes two arguments: a dictionary d and a word word. It returns a new dictionary with the same contents as d, except that the value associated with the key word is incremented by 1. If the key word doesn't exist in d, it is added with a value of 0. Finally, we print the resulting dictionary of word counts.
 
 
 # Next  run

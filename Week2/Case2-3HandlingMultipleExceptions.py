@@ -1,7 +1,7 @@
 # Handling multiple exceptions
 try:
     result = 10 / 0
-except (ZeroDivisionError, TypeError) as e:
+except(ZeroDivisionError, TypeError) as e:
     print("Error occurred:", str(e))
 
 #Using the else clause in exception handling
@@ -152,3 +152,17 @@ try:
     print(sqrt(-10))
 except ValueError as e:
     print("An error occurred:", str(e))
+
+
+#Example
+#Try to open and write to a file that is not writable:
+try:
+  f = open("example.txt")
+  try:
+    f.write("Lorum Ipsum")
+  except:
+    print("Something went wrong when writing to the file")
+  finally:
+    f.close()
+except:
+  print("Something went wrong when opening the file")
