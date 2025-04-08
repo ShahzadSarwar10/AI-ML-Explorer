@@ -46,7 +46,7 @@ print (" Next  run")
 import math
 
 # sqrt computes the square root
-square_root = math.sqrt(4)
+square_root = math.sqrt(3)
 
 print("Square Root of 4 is",square_root)
 
