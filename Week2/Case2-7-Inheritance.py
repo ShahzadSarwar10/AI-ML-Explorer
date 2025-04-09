@@ -61,3 +61,39 @@ labrador.eat()
 
 # Next  run
 print (" Next  run")
+
+class Bird:
+    def fly(self):
+        print("The bird is flying...")
+
+class Mammal:
+    def run(self):
+        print("The mammal is running...")
+
+class Bat(Bird, Mammal):
+    pass
+
+b = Bat()
+b.fly()         # Output: The bird is flying...
+b.run()         # Output: The mammal is running…
+
+
+# Next  run
+print (" Next  run")
+
+class Animal:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def eat(self):
+        print("The animal is eating...")
+
+class Dog(Animal):
+    def bark(self):
+        print("Woof woof!")
+
+d = Dog("Rover", 3)
+print(d.name)   # Output: Rover
+d.eat()         # Output: The animal is eating...
+d.bark()        # Output: Woof woof!

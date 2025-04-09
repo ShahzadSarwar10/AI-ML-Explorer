@@ -19,25 +19,24 @@ jessa = Person('Jessa', 'Female', 'Software Engineer')
 # create object of a class
 richard = Person('Richard', 'Male', 'Project Manager')
 
-print(jessa.isRegisteredInLabDB)
 print(Person.isRegisteredInLabDB)
+print(jessa.name)
+print(jessa.profession)
+
+#print(Person.profession)
 
 # call methods
 jessa.show()
 jessa.work()
 
 #Set Class variable
-jessa.isRegisteredInLabDB="TrueYesRegisteredJessa"
 Person.isRegisteredInLabDB="TrueYesRegisteredPerson"
-print(jessa.isRegisteredInLabDB)
 print(Person.isRegisteredInLabDB)
 
 # call methods
 richard.show()
 richard.work()
 
-print(richard.isRegisteredInLabDB)
-print(jessa.isRegisteredInLabDB)
 print(Person.isRegisteredInLabDB)
 
 #build-in Method   __str__
@@ -207,7 +206,7 @@ class JustCounter:
 counter = JustCounter()
 counter.count()
 counter.count()
-print (counter.__secretCount)
+#print (counter.__secretCount)
 
 
 # Next  run
@@ -268,6 +267,7 @@ print (" Next  run")
 from datetime import date
 
 class DateUtils:
+   
     @staticmethod
     def is_leap_year(year):
         """Check if a year is a leap year."""
@@ -281,27 +281,6 @@ if DateUtils.is_leap_year(year):
     print(f"{year} is a leap year.")
 else:
     print(f"{year} is not a leap year.") 
-
-# Next  run
-print (" Next  run")
-#Class Method
-#Class methods are associated with the class and have access to class-specific data. They are defined using the @classmethod decorator and take the class itself (cls) as their first parameter. Let's explore a scenario where class methods shine.
-#Example: Factory Method
-class Shape:
-    def __init__(self, color):
-        self.color = color
-
-    @classmethod
-    def create_circle(cls, radius):
-        return cls(color="red", radius=radius)
-
-    @classmethod
-    def create_square(cls, side_length):
-        return cls(color="blue", side_length=side_length)
-
-# Usage
-circle = Shape.create_circle(radius=5)
-square = Shape.create_square(side_length=4) 
 
 
 # Next  run
@@ -331,3 +310,34 @@ account.deposit(500)
 account.withdraw(200) 
 
 
+#Example of Different Method Types
+class MethodTypes:
+
+    name = "Ragnar"
+
+    def instanceMethod(self):
+        # Creates an instance atribute through keyword self
+        self.lastname = "Lothbrock"
+        print(self.name)
+        print(self.lastname)
+            
+    @classmethod
+    def classMethod(cls):
+        # Access a class atribute through keyword cls
+        cls.name = "Lagertha"
+        print(cls.name)
+       # print(cls.lastname)
+
+    @staticmethod
+    def staticMethod():
+        print("This is a static method")
+       # print(name)
+
+# Creates an instance of the class
+m = MethodTypes()
+# Calls instance method
+m.instanceMethod()
+
+
+MethodTypes.classMethod()
+MethodTypes.staticMethod()

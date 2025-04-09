@@ -113,6 +113,7 @@ Details: Nissan Magnite Price: 550000
 Vehicle max speed is 160
 Vehicle has 6 shifter gearbox"""
 
+import math
 
 class Shape:
     def __init__(self, name):
@@ -146,7 +147,7 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-        return pi*self.radius**2
+        return math.pi*self.radius**2
 
 
 a = Square(4)

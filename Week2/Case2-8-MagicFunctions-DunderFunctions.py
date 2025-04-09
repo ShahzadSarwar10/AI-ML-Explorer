@@ -47,7 +47,7 @@ setattr(obj,name,value) − to set an attribute. If attribute does not exist, th
 delattr(obj, name) − to delete an attribute."""
 
 # Returns true if 'age' attribute exists
-hasattr(emp1, 'age')   
+print(hasattr(emp1, 'age'))
 # Returns value of 'age' attribute
 print(getattr(emp1, 'age'))    
 # Set attribute 'age' at 9
