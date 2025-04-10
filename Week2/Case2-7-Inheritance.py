@@ -58,6 +58,7 @@ labrador = Dog()
 
 labrador.eat()
 
+print(Dog.mro())
 
 # Next  run
 print (" Next  run")

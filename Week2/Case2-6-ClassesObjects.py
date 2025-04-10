@@ -327,7 +327,7 @@ class MethodTypes:
         cls.name = "Lagertha"
         print(cls.name)
        # print(cls.lastname)
-
+        print()
     @staticmethod
     def staticMethod():
         print("This is a static method")

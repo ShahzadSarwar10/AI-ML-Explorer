@@ -70,12 +70,12 @@ class Animal:
         pass
 
 class Dog(Animal):
-    def _make_sound(self):
+    def make_sound(self):
         print(f"{self._name} barks")
-
+        self._make_sound()
 # Accessing protected members
 dog = Dog("Buddy")
-dog._make_sound()
+dog.make_sound()
 
 #Buddy barks
 
