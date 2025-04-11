@@ -53,4 +53,4 @@ print (" Next  run")
 # create an empty array of length 4
 array1 = np.empty(4)
 print(array1)
-#[1.47966080e-316 0.00000000e+000 9.06092203e-312 2.47218893e-253]
+#[0. 0. 0. 0.]
