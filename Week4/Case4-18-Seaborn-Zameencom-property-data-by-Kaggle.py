@@ -124,7 +124,7 @@ This function provides access to several axes-level functions that show the rela
 g=sns.catplot(data=dffilter, x="agency", y="price")
 g.figure.suptitle("sns.catplot(data=df, x=agency, y=price)"  )
 # Display the plot
-g.figure.show()
+g.figure.show() 
 read = input("Wait for me....")
 g.figure.clear()
 
@@ -144,3 +144,68 @@ g.figure.suptitle("sns.heatmap(glue)  - glue = dffilter.pivot(columns=agency, va
 g.figure.show()
 read = input("Wait for me....")
 g.figure.clear()
+
+
+
+""""Seaborn provides a variety of plot types for different data visualization needs. These can be broadly categorized as: 
+
+Relational plots: 
+
+    These plots visualize the relationship between two or more variables. 
+
+    scatterplot(): Displays the relationship between two numerical variables using points. 
+
+    lineplot(): Shows the relationship between two numerical variables as a line, often used for time series data or trends. 
+
+Categorical plots: 
+
+    These plots display the distribution of a variable across different categories. 
+
+    barplot(): Shows the mean of a numerical variable for different categories, with error bars. 
+
+    countplot(): Displays the frequency of each category. 
+
+    boxplot(): Shows the distribution of a numerical variable for different categories using quartiles. 
+
+    violinplot(): Similar to a boxplot, but also shows the probability density of the data. 
+
+    stripplot(): Displays individual data points for each category, allowing for visualization of the distribution. 
+
+    swarmplot(): Similar to a stripplot, but the points are adjusted to avoid overlapping, providing a better view of the distribution. 
+
+Distribution plots: 
+
+    These plots visualize the distribution of a single variable. 
+
+    histplot(): Displays the frequency distribution of a numerical variable using bins. 
+
+    kdeplot(): Shows the estimated probability density function of a numerical variable. 
+
+    ecdfplot(): Displays the empirical cumulative distribution function of a numerical variable. 
+
+Multi-plot grids: 
+
+    These functions allow for creating multiple plots at once, useful for comparing relationships between multiple variables. 
+
+    pairplot(): Creates a matrix of scatter plots for all pairs of variables in a dataset. 
+
+    relplot(): Facets scatterplot() and lineplot() across additional categorical variables. 
+
+    catplot(): Facets categorical plots across additional categorical variables. 
+
+Regression plots: 
+
+    These plots visualize the relationship between two variables and fit a regression model. 
+
+    lmplot(): Combines regplot() with FacetGrid to show linear relationships with the option to condition on other variables. 
+
+    regplot(): Shows the relationship between two variables with a fitted regression line. 
+
+Other plots: 
+
+    heatmap(): Displays a matrix of values as a heatmap, often used for correlation matrices or other tabular data. 
+
+
+Note: The choice of plot type depends on the type of data and the insights you want to extract. For comparing distributions, boxplot() or violinplot() are suitable. For visualizing relationships between two variables, scatterplot() or lineplot() can be used. For exploring relationships between multiple variables, pairplot() is a powerful tool. 
+
+ """
