@@ -1,7 +1,91 @@
 import seaborn as sns
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt 
 
+
+#https://seaborn.pydata.org/generated/seaborn.set_theme.html
+#https://seaborn.pydata.org/tutorial/aesthetics.html
+#https://python-charts.com/seaborn/themes/
+"""
+ Built-in Themes
+Seaborn provides five built-in themes:
+darkgrid: Adds a gray background with white gridlines. It is the default theme.
+whitegrid: Adds gray gridlines on a white background.
+dark: Similar to darkgrid but without the gridlines.
+white: Similar to whitegrid but without the gridlines.
+ticks: Adds ticks to the axes and uses a white background.
+Setting Themes
+The seaborn.set_theme() or seaborn.set_style() function can be used to set the theme for all plots. """
+
+# Sample data
+data = pd.DataFrame({'x': np.arange(100), 'y': np.random.rand(100).cumsum()})
+
+# Set the theme
+sns.set_theme(style='darkgrid')
+# Alternatively
+# sns.set_style('darkgrid')
+
+# Create a plot
+sns.lineplot(x='x', y='y', data=data)
+plt.show()
+
+# Other themes can be set similarly
+sns.set_theme(style='whitegrid')
+sns.lineplot(x='x', y='y', data=data)
+plt.show()
+
+sns.set_theme(style='dark')
+sns.lineplot(x='x', y='y', data=data)
+plt.show()
+
+sns.set_theme(style='white')
+sns.lineplot(x='x', y='y', data=data)
+plt.show()
+
+sns.set_theme(style='ticks')
+sns.lineplot(x='x', y='y', data=data)
+plt.show()
+
+
+"""Customizing Themes
+It is possible to customize the themes further by passing a dictionary of parameters to the rc argument of seaborn.set_theme() or seaborn.set_style(). This allows for fine-grained control over the appearance of plots."""
+
+# Customize the theme
+sns.set_theme(style='darkgrid', rc={'axes.facecolor': 'grey', 'grid.color': 'white'})
+
+# Create a plot
+sns.lineplot(x='x', y='y', data=data)
+plt.show()
+
+"""seaborn.set_theme() allows customization of the appearance of plots by modifying matplotlib's rc parameters. It accepts a dictionary rc to override default settings. Here's a breakdown of commonly used rc parameters:
+axes.facecolor: Background color of the plotting area (e.g., 'white', '#EAEAF2').
+axes.edgecolor: Color of the axes lines (e.g., 'black', 'gray').
+axes.linewidth: Width of the axes lines in points.
+axes.grid: Whether to show the grid ('True' or 'False').
+axes.grid.axis: Which axes to show the grid lines on ('x', 'y', or 'both').
+axes.grid.which: Which grid lines to draw ('major', 'minor', or 'both').
+axes.labelcolor: Color of the axis labels.
+axes.labelsize: Size of the axis labels in points or as a relative string (e.g., 'large', 'small').
+axes.titlesize: Size of the plot title.
+xtick.color: Color of the x-axis tick marks and labels.
+ytick.color: Color of the y-axis tick marks and labels.
+xtick.labelsize: Size of the x-axis tick labels.
+ytick.labelsize: Size of the y-axis tick labels.
+grid.color: Color of the grid lines.
+grid.linewidth: Width of the grid lines.
+font.family: Font family to use (e.g., 'sans-serif', 'serif', 'monospace').
+font.size: Default font size for text elements.
+lines.linewidth: Width of lines in plots.
+lines.linestyle: Style of lines (e.g., '-', '--', '-.', ':').
+patch.edgecolor: Color of patch edges (e.g., in histograms, bar plots).
+patch.linewidth: Width of patch edges.
+legend.frameon: Whether to display a frame around the legend ('True' or 'False').
+legend.fontsize: Size of the legend text.
+figure.figsize: Size of the figure (width, height) in inches.
+figure.facecolor: Background color of the entire figure."""
+
+#Zameencom data - based examples
 # Load data from a CSV file
 df = pd.read_csv('Week3/zameencom-property-data-By-Kaggle-short.csv',delimiter=";", parse_dates=[14],  date_format={'date_added': '%m-%d-%Y'} , index_col='property_id')
 
@@ -209,3 +293,4 @@ Other plots:
 Note: The choice of plot type depends on the type of data and the insights you want to extract. For comparing distributions, boxplot() or violinplot() are suitable. For visualizing relationships between two variables, scatterplot() or lineplot() can be used. For exploring relationships between multiple variables, pairplot() is a powerful tool. 
 
  """
+
