@@ -61,7 +61,7 @@ We can also see this difference visually, by taking a look at the class or targe
 
 bankdata['class'].plot.hist();
 plt.show()
-plt.close()
+#plt.close()
 
 """
 We can have a look at the statistical measurements with the describe() dataframe method. We can also use .T of transpose - to invert columns and rows, making it more direct to compare across values:
@@ -77,11 +77,12 @@ import matplotlib.pyplot as plt
 
 for col in bankdata.columns[:-1]:
     plt.title(col)
-    bankdata[col].plot.hist() #plotting the histogram with Pandas
-    plt.show();
+    gc= bankdata[col].plot.hist() #plotting the histogram with Pandas
+    gc.figure.show()
+    #plt.show();
 
 
-plt.close()
+#plt.close()
 
 """
 We can now move on to the second part, and plot the scatter plot of each variable. To do this, we can also select all columns except for the class, with columns[:-1],
@@ -92,15 +93,16 @@ We can now move on to the second part, and plot the scatter plot of each variabl
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-
+"""
 for feature_1 in bankdata.columns[:-1]:
     for feature_2 in bankdata.columns[:-1]:
         if feature_1 != feature_2: # test if the features are different
             print(feature_1, feature_2) # prints features names
-            sns.scatterplot(x=feature_1, y=feature_2, data=bankdata, hue='class') # plots each feature points with its color depending on the class column value
-            plt.show();
+            gi= sns.scatterplot(x=feature_1, y=feature_2, data=bankdata, hue='class') # plots each feature points with its color depending on the class column value
+            gi.figure.show() 
+"""
 
-plt.close()
+#plt.close()
 
 
 """
@@ -111,7 +113,7 @@ Both previous for loops we had done can be substituted by just this line:
 sns.pairplot(bankdata, hue='class');
 plt.show()
 
-plt.close()
+#plt.close()
 
 
 """
@@ -182,9 +184,10 @@ it is best to print its outcome, so its results are formatted. This is the follo
 from sklearn.metrics import classification_report, confusion_matrix
 
 cm = confusion_matrix(y_test,y_pred)
-sns.heatmap(cm, annot=True, fmt='d').set_title('Confusion matrix of linear SVM') # fmt='d' formats the numbers as digits, which means integers
-plt.show()
-plt.close()
+gg=sns.heatmap(cm, annot=True, fmt='d').set_title('Confusion matrix of linear SVM') # fmt='d' formats the numbers as digits, which means integers
+gg.figure.show() 
+
+#plt.close()
 
 print(classification_report(y_test,y_pred))
 
