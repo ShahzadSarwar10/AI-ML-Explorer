@@ -280,15 +280,17 @@ https://www.geeksforgeeks.org/epoch-in-machine-learning/
 https://nulldog.com/tensorflow-epochs-vs-steps-key-differences-explained
 
 """
-print("model.fit(x_train,y_train , epochs=5) :         \n" , model.fit(x_train,y_train , epochs=5))
+print("model.fit(x_train,y_train , epochs=5) :         \n" , model.fit(x_train,y_train , epochs=3 , batch_size=20 ))
 
 
 
-print("[INFO] evaluating network...")
+print("[INFO] Predict via network...")
 predictions = model.predict(x_test)
 
 
 
 print("model.evaluate(x_test,y_test) :    \n" , model.evaluate(x_test,y_test) )
+
+print("Model summary:    \n " , model.summary() )
 
 print()
